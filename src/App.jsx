@@ -8,30 +8,36 @@ function App() {
 
   // fetching dei dati
 
-  function actors() {
-    axios.get("https://freetestapi.com/api/v1/actors")
+  function fetchActors() {
+    axios.get("https://www.freetestapi.com/api/v1/actors")
       .then((res) => setActors(res.data))
 
 
   }
 
-  useEffect(fetchActor, [])
+  useEffect(fetchActors, [])
 
   return (
     <>
-
       <ul>
         {actors.map((actor) => (
-          <li key={actor.id}>{actor.name}, {actor.birth_year}, {actor.death_year}, {actor.nationality},  </li>
-        )
+          <li key={actor.id}>
+            <img src={actor.image} alt={actor.name} />
+            <h2>{actor.name}</h2>
+            <p><strong>Nato:</strong> {actor.birth_year}</p>
+            <p><strong>Morto:</strong> {actor.death_year}</p>
+            <p><strong>Nazionalità:</strong> {actor.nationality}</p>
+            <p><strong>Biografia:</strong> {actor.biography}</p>
+            <p><strong>Famoso per:</strong></p>
 
-
-
-        )}
+          </li>
+        ))}
       </ul>
-
     </>
-  )
+  );
+
 }
+
+
 
 export default App
