@@ -15,6 +15,8 @@ function App() {
 
   }
 
+  useEffect(fetchActor, [])
+
   return (
     <>
 
