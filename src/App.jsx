@@ -20,6 +20,16 @@ function App() {
   return (
     <>
 
+      <ul>
+        {actors.map((actor) => (
+          <li key={actor.id}>{actor.name}, {actor.birth_year}, {actor.death_year}, {actor.nationality},  </li>
+        )
+
+
+
+        )}
+      </ul>
+
     </>
   )
 }
