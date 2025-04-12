@@ -28,26 +28,15 @@ export default function App() {
           <p>morte: {actor.death_year}</p>
           <p>nazionalità: {actor.nationality}</p>
 
-
-
+          <p>conosciuto per: {actor.known_for.map((known_for, index) => (
+            <li key={index}>{known_for}</li>
+          )
+          )}  </p>
         </li>
-
-
-
       )}
 
-
-
-
     </ul >
-
-
-
-
   )
-
-
-
 }
 
 
