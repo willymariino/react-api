@@ -22,8 +22,9 @@ export default function App() {
       {actors.map((actor) =>
         <li key={actor.id}>
 
-          <p>nome: {actors.name}</p>
-          <p> anno di nascita: {actors.birth_year}</p>
+          <img src={actor.image} alt={actor.name} />
+          <p>nome: {actor.name}</p>
+          <p> anno di nascita: {actor.birth_year}</p>
 
 
 
