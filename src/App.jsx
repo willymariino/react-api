@@ -25,7 +25,8 @@ export default function App() {
           <img src={actor.image} alt={actor.name} />
           <p>nome: {actor.name}</p>
           <p> anno di nascita: {actor.birth_year}</p>
-
+          <p>morte: {actor.death_year}</p>
+          <p>nazionalità: {actor.nationality}</p>
 
 
 
