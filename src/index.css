@@ -5,12 +5,18 @@
 }
 
 .container-card-items {
+    padding: 20px;
+}
+
+.container-card-items ul {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    list-style: none;
 }
 
-.container-card-items>div {
+.card {
     width: calc((100% - 60px) / 4);
-    height: 200px;
+    display: flex;
+
 }
