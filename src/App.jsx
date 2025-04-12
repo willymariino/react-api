@@ -19,10 +19,25 @@ export default function App() {
   useEffect(fetchActors, []) //array vuoto nelle dipendenze per fare in modo che la funzione che venga esguita solo al primo render dei componenti
   return (
     <ul>
+      {actors.map((actor) =>
+        <li key={actor.id}>
+
+          <p>nome: {actors.name}</p>
+          <p> anno di nascita: {actors.birth_year}</p>
 
 
 
-    </ul>
+
+        </li>
+
+
+
+      )}
+
+
+
+
+    </ul >
 
 
 
