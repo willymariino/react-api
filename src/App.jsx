@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 export default function App() {
   const [actors, setActors] = useState([]) /* creazione dello stato: creaimo una lista in cui conserveremo la lista degli actors,
-                                              utilizziamo los tato per aggiornare dinamicamentela UI quando otteniamo i dati dal server. */
+                                              utilizziamo lo stato per aggiornare dinamicamentela UI quando otteniamo i dati dal server. */
 
   function fetchActors() {
     axios.get("https://www.freetestapi.com/api/v1/actors") // chaiamata API in get
@@ -15,6 +15,19 @@ export default function App() {
     il then consente la gestiione asincrona, eseguendo il codice solo dopo che l'operazione è stata completata */
 
   }
+
+  useEffect(fetchActors, []) //array vuoto nelle dipendenze per fare in modo che la funzione che venga esguita solo al primo render dei componenti
+  return (
+    <ul>
+
+
+
+    </ul>
+
+
+
+
+  )
 
 
 
