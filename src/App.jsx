@@ -18,30 +18,37 @@ export default function App() {
 
   useEffect(fetchActors, []) //array vuoto nelle dipendenze per fare in modo che la funzione che venga esguita solo al primo render dei componenti
   return (
-    <ul>
+    <div className="container-card-item">
       <h1>Attori famosi</h1>
-      {actors.map((actor) =>
-        <li key={actor.id}>
+      <ul>
+        {actors.map((actor) =>
+          <li key={actor.id} className="card">
 
-          <img src={actor.image} alt={actor.name} />
-          <p>nome: {actor.name}</p>
-          <p> anno di nascita: {actor.birth_year}</p>
-          <p>morte: {actor.death_year}</p>
-          <p>nazionalità: {actor.nationality}</p>
+            <div className="image-container">
+              <img src={actor.image} alt={actor.name} />
+            </div>
 
-          <p>conosciuto per: {actor.known_for.map((known_for, index) => (
-            <li key={index}>{known_for}</li>
+            <div className="textbox">
+              <p>nome: {actor.name}</p>
+              <p> anno di nascita: {actor.birth_year}</p>
+              <p>morte: {actor.death_year}</p>
+              <p>nazionalità: {actor.nationality}</p>
 
-          )
+              <p> conosciuto per: </p>
+              {actor.known_for.map((known_for, index) => (
+                <li key={index}>{known_for}</li>
 
-          )}
+              )
 
-          </p>
+              )}
 
-        </li>
-      )}
+            </div>
 
-    </ul >
+          </li>
+        )}
+
+      </ul>
+    </div>
   )
 }
 
