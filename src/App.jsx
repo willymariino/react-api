@@ -19,6 +19,7 @@ export default function App() {
   useEffect(fetchActors, []) //array vuoto nelle dipendenze per fare in modo che la funzione che venga esguita solo al primo render dei componenti
   return (
     <ul>
+      <h1>Attori famosi</h1>
       {actors.map((actor) =>
         <li key={actor.id}>
 
@@ -30,8 +31,13 @@ export default function App() {
 
           <p>conosciuto per: {actor.known_for.map((known_for, index) => (
             <li key={index}>{known_for}</li>
+
           )
-          )}  </p>
+
+          )}
+
+          </p>
+
         </li>
       )}
 
