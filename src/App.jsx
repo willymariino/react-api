@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import actorCard from "./components/actorCard";
+import ActorCard from "./components/actorCard";
 
 export default function App() {
   const [actors, setActors] = useState([]) /* creazione dello stato: creaimo una lista in cui conserveremo la lista degli actors,
@@ -21,6 +21,16 @@ export default function App() {
   return (
     <div className="container-card-item">
       <h1>Attori famosi</h1>
+
+      {actors.map((actor) => (
+
+        <ActorCard key={actor.id} actor={actor} />
+
+      )
+
+
+
+      )}
 
     </div>
   )
