@@ -14,7 +14,7 @@ function ActorCard({ actor }) {
 
                 <p> conosciuto per: </p>
                 <ul>
-                    {actor.know_for.map((movie, index) => (
+                    {actor.known_for.map((movie, index) => (
                         <li key={index}> {movie} </li>
                     )
 
