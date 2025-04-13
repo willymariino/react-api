@@ -1,18 +1,20 @@
-function actorCard({ name, image }) {
+function actorCard({ actor }) {
 
     return (
-        <div className="container-card-items" >
-            <h1>Attori famosi</h1>
+        <div className="card">
+            <div className="image-container">
+                <img src={actor.image} alt={actor.name} />
+            </div>
 
-            {actors.map((actor) => (
-                <actorCard key={actor.id} />
-            )
+            <div className="textbox">
+                <p>nome: {actor.name}</p>
+                <p> anno di nascita: {actor.birth_year}</p>
+                <p>morte: {actor.death_year}</p>
+                <p>nazionalità: {actor.nationality}</p>
 
-                // test, non aggiorna github
+                <p> conosciuto per: </p>
 
-            )}
-
-
+            </div>
 
         </div>
     )
