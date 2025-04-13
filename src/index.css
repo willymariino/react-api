@@ -11,12 +11,12 @@ h1 {
 
 .container-card-item {
     display: flex;
-    gap: 40px;
+    gap: 50px;
     flex-wrap: wrap;
 }
 
 .card {
-    width: calc((100% - 120px) / 4);
+    width: calc((100% - 150px) / 4);
     display: flex;
 
 }
@@ -25,6 +25,13 @@ h1 {
     max-height: 200px;
 }
 
+.textbox {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    margin-left: 3%;
+
+}
 
 
 
