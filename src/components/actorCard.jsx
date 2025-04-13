@@ -1,4 +1,4 @@
-function actorCard({ actor }) {
+function ActorCard({ actor }) {
 
     return (
         <div className="card">
@@ -13,6 +13,14 @@ function actorCard({ actor }) {
                 <p>nazionalità: {actor.nationality}</p>
 
                 <p> conosciuto per: </p>
+                <ul>
+                    {actor.know_for.map((movie, index) => (
+                        <li key={index}> {movie} </li>
+                    )
+
+                    )}
+
+                </ul>
 
             </div>
 
@@ -21,4 +29,4 @@ function actorCard({ actor }) {
 
 }
 
-export default actorCard
+export default ActorCard
