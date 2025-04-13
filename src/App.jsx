@@ -21,34 +21,7 @@ export default function App() {
   return (
     <div className="container-card-item">
       <h1>Attori famosi</h1>
-      <ul>
-        {actors.map((actor) =>
-          <li key={actor.id} className="card">
 
-            <div className="image-container">
-              <img src={actor.image} alt={actor.name} />
-            </div>
-
-            <div className="textbox">
-              <p>nome: {actor.name}</p>
-              <p> anno di nascita: {actor.birth_year}</p>
-              <p>morte: {actor.death_year}</p>
-              <p>nazionalità: {actor.nationality}</p>
-
-              <p> conosciuto per: </p>
-              {actor.known_for.map((known_for, index) => (
-                <li key={index}>{known_for}</li>
-
-              )
-
-              )}
-
-            </div>
-
-          </li>
-        )}
-
-      </ul>
     </div>
   )
 }
