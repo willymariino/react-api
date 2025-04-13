@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import actorCard from "./components/actorCard";
 
 export default function App() {
   const [actors, setActors] = useState([]) /* creazione dello stato: creaimo una lista in cui conserveremo la lista degli actors,
@@ -51,5 +52,3 @@ export default function App() {
     </div>
   )
 }
-
-

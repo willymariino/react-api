@@ -3,20 +3,3 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.container-card-items {
-    padding: 20px;
-}
-
-.container-card-items ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    list-style: none;
-}
-
-.card {
-    width: calc((100% - 60px) / 4);
-    display: flex;
-
-}
