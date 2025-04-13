@@ -13,6 +13,16 @@ function actorCard({ name, image }) {
                 <p>nazionalità: {actor.nationality}</p>
 
                 <p> conosciuto per: </p>
+                <ul>
+                    {actor.known_for.map((movie, index) => (
+                        <li key={index}>{movie}</li>
+                    )
+
+
+                    )}
+
+
+                </ul>
 
             </div>
 
