@@ -3,7 +3,7 @@ function ActorCard({ actor }) {
     return (
         <div className="card">
             <div className="image-container">
-                <img src={actor.image} alt={actor.name} />
+                <img src={actor.image} className="actor-image" alt={actor.name} />
             </div>
 
             <div className="textbox">
